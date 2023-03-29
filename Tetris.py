@@ -1,3 +1,4 @@
+#You will need to install pygame library with pip3 install pygame command.
 import pygame
 import random
 
