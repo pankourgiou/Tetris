@@ -1,3 +1,6 @@
+import tkinter as tk
+from tkinter import messagebox
+from PIL import Image, ImageTk
 #You will need to install pygame library with pip3 install pygame command.
 import pygame
 import random
@@ -217,3 +220,68 @@ while not done:
     clock.tick(fps)
 
 pygame.quit()
+
+
+
+def open_app():
+    messagebox.showinfo("Sonia_OS", "Are we living in a simulation?")
+    messagebox.showinfo("Sonia_OS", "01011001 rocks")
+    messagebox.showinfo("Sonia_OS", "2112 rocks")
+
+def main():
+    # Initialize the main window
+    root = tk.Tk()
+    root.title("Sonia_OS")
+    root.geometry("800x600")
+    root.resizable(False, False)
+
+    # Load the background image
+    bg_image = Image.open("Sonia_1.jpg")
+    bg_image = bg_image.resize((1024, 768), Image.ANTIALIAS)
+    bg_photo = ImageTk.PhotoImage(bg_image)
+
+    # Set the background
+    bg_label = tk.Label(root, image=bg_photo)
+    bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+    # Add a button (simulating an app)
+    button1 = tk.Button(root, text="Open App", command=open_app, font=("Arial", 14), bg="lightblue")
+    button1.place(x=350, y=250, width=100, height=50)
+
+    # Run the application
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
+    
+def open_app():
+    messagebox.showinfo("Sonia_OS", "Are we living in a simulation?")
+    messagebox.showinfo("Sonia_OS", "Let's play")
+    messagebox.showinfo("Sonia_OS", "2112 rocks")
+
+def main():
+    # Initialize the main window
+    root = tk.Tk()
+    root.title("Sonia_OS")
+    root.geometry("800x600")
+    root.resizable(False, False)
+
+    # Load the background image
+    bg_image = Image.open("fun_1000.jpg")
+    bg_image = bg_image.resize((1024, 768), Image.ANTIALIAS)
+    bg_photo = ImageTk.PhotoImage(bg_image)
+
+    # Set the background
+    bg_label = tk.Label(root, image=bg_photo)
+    bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+    # Add a button (simulating an app)
+    button1 = tk.Button(root, text="Open App", command=open_app, font=("Arial", 14), bg="lightblue")
+    button1.place(x=350, y=250, width=100, height=50)
+
+    # Run the application
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
+
